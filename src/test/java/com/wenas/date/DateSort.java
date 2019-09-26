@@ -14,7 +14,7 @@ import java.util.List;
 public class DateSort {
 
     public static void main(String[] args) {
-
+           
         List<String> list =new ArrayList<String>();
         list.add("2014-09-04 10:34:41");
         list.add("2013-08-04 13:42:19");
@@ -27,7 +27,7 @@ public class DateSort {
         System.out.println(list);
         Collections.sort(list);
         for (String str : list) {
-            System.out.println(str);
+            System.out.println(str + "123");
         }
 
 
