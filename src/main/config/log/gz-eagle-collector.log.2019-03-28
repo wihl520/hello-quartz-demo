@@ -1,0 +1,346 @@
+2019-03-28 08:07:34,587 INFO [com.linkcm.core.controller.LocaltionController] [Thread-14] [LocaltionController.java:77] - <controller LocaltionAnyzTaskListener start...>
+2019-03-28 08:07:34,780 INFO [com.mchange.v2.log.MLog] [main] [MLog.java:80] - <MLog clients using log4j logging.>
+2019-03-28 08:07:36,069 INFO [com.mchange.v2.c3p0.C3P0Registry] [main] [C3P0Registry.java:204] - <Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]>
+2019-03-28 08:07:37,743 INFO [com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource] [main] [AbstractPoolBackedDataSource.java:462] - <Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 60000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 20000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge11ba11hq1sls10stnm6|32c42f83, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.postgresql.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge11ba11hq1sls10stnm6|32c42f83, idleConnectionTestPeriod -> 120, initialPoolSize -> 5, jdbcUrl -> jdbc:postgresql://10.195.88.10:5432/dss-opp?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]>
+2019-03-28 08:07:57,279 WARN [com.mchange.v2.async.ThreadPoolAsynchronousRunner] [Timer-0] [ThreadPoolAsynchronousRunner.java:608] - <com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@6bcc6745 -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!>
+2019-03-28 08:07:57,293 WARN [com.mchange.v2.async.ThreadPoolAsynchronousRunner] [Timer-0] [ThreadPoolAsynchronousRunner.java:624] - <com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@6bcc6745 -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6abbfe58 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@373bd6cc (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3cc7d49 (com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1)
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@33f789a5
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@68bf8bd
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6f6fc316
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@fa9dd87
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@9cd776
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@598b89c8
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@48ed869c
+Pool thread stack traces:
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2,5,main]
+		java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:211)
+		org.postgresql.core.PGStream.<init>(PGStream.java:62)
+		org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
+		org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
+		org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
+		org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
+		org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
+		org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:30)
+		org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+		org.postgresql.Driver.makeConnection(Driver.java:393)
+		org.postgresql.Driver.connect(Driver.java:267)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0,5,main]
+		java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:211)
+		org.postgresql.core.PGStream.<init>(PGStream.java:62)
+		org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
+		org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
+		org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
+		org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
+		org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
+		org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:30)
+		org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+		org.postgresql.Driver.makeConnection(Driver.java:393)
+		org.postgresql.Driver.connect(Driver.java:267)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+	Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1,5,main]
+		java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:211)
+		org.postgresql.core.PGStream.<init>(PGStream.java:62)
+		org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
+		org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
+		org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
+		org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
+		org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
+		org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:30)
+		org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+		org.postgresql.Driver.makeConnection(Driver.java:393)
+		org.postgresql.Driver.connect(Driver.java:267)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+		com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+>
+2019-03-28 08:09:24,843 INFO [com.linkcm.core.controller.LocaltionController] [Thread-14] [LocaltionController.java:77] - <controller LocaltionAnyzTaskListener start...>
+2019-03-28 08:09:24,957 INFO [com.mchange.v2.log.MLog] [main] [MLog.java:80] - <MLog clients using log4j logging.>
+2019-03-28 08:09:25,172 INFO [com.mchange.v2.c3p0.C3P0Registry] [main] [C3P0Registry.java:204] - <Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]>
+2019-03-28 08:09:26,831 INFO [com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource] [main] [AbstractPoolBackedDataSource.java:462] - <Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 60000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 20000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge11ba11hq45ji1o2iaxw|5ba26eb0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.postgresql.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge11ba11hq45ji1o2iaxw|5ba26eb0, idleConnectionTestPeriod -> 120, initialPoolSize -> 5, jdbcUrl -> jdbc:postgresql://10.195.88.10:5432/dss-opp?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]>
+2019-03-28 08:09:27,960 INFO [org.quartz.simpl.SimpleThreadPool] [main] [SimpleThreadPool.java:258] - <Job execution threads will use class loader of thread: main>
+2019-03-28 08:09:28,067 INFO [org.quartz.core.SchedulerSignalerImpl] [main] [SchedulerSignalerImpl.java:63] - <Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl>
+2019-03-28 08:09:28,068 INFO [org.quartz.core.QuartzScheduler] [main] [QuartzScheduler.java:215] - <Quartz Scheduler v.1.6.1 created.>
+2019-03-28 08:09:28,106 INFO [org.quartz.simpl.RAMJobStore] [main] [RAMJobStore.java:141] - <RAMJobStore initialized.>
+2019-03-28 08:09:28,107 INFO [org.quartz.impl.StdSchedulerFactory] [main] [StdSchedulerFactory.java:1224] - <Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'>
+2019-03-28 08:09:28,107 INFO [org.quartz.impl.StdSchedulerFactory] [main] [StdSchedulerFactory.java:1228] - <Quartz scheduler version: 1.6.1>
+2019-03-28 08:09:28,205 INFO [org.quartz.core.QuartzScheduler] [main] [QuartzScheduler.java:461] - <Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.>
+2019-03-28 08:09:28,212 INFO [com.linkcm.core.collector.CollectorFactory] [main] [CollectorFactory.java:65] - <Register scheduler:dangerCarConfiguration>
+2019-03-28 08:09:28,217 INFO [org.quartz.core.QuartzScheduler] [main] [QuartzScheduler.java:461] - <Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.>
+2019-03-28 08:09:28,217 INFO [com.linkcm.core.collector.CollectorFactory] [main] [CollectorFactory.java:65] - <Register scheduler:sitePoiSyncConfiguration>
+2019-03-28 08:09:28,219 INFO [org.quartz.core.QuartzScheduler] [main] [QuartzScheduler.java:461] - <Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.>
+2019-03-28 08:09:28,219 INFO [com.linkcm.core.collector.CollectorFactory] [main] [CollectorFactory.java:65] - <Register scheduler:siteDataConfiguration>
+2019-03-28 08:09:28,222 INFO [org.quartz.core.QuartzScheduler] [main] [QuartzScheduler.java:461] - <Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.>
+2019-03-28 08:09:28,222 INFO [com.linkcm.core.collector.CollectorFactory] [main] [CollectorFactory.java:65] - <Register scheduler:airSiteDataConfiguration>
+2019-03-28 08:09:28,224 INFO [org.quartz.core.QuartzScheduler] [main] [QuartzScheduler.java:461] - <Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.>
+2019-03-28 08:09:28,225 INFO [com.linkcm.core.collector.CollectorFactory] [main] [CollectorFactory.java:65] - <Register scheduler:laserRadarConfiguration>
+2019-03-28 08:09:28,228 INFO [org.quartz.core.QuartzScheduler] [main] [QuartzScheduler.java:461] - <Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.>
+2019-03-28 08:09:28,229 INFO [com.linkcm.core.collector.CollectorFactory] [main] [CollectorFactory.java:65] - <Register scheduler:geologyRainfallConfiguration>
+2019-03-28 08:09:28,230 INFO [org.quartz.core.QuartzScheduler] [main] [QuartzScheduler.java:461] - <Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.>
+2019-03-28 08:09:28,231 INFO [com.linkcm.core.collector.CollectorFactory] [main] [CollectorFactory.java:65] - <Register scheduler:hazeDataConfiguration>
+2019-03-28 08:09:30,057 WARN [org.eclipse.jetty.deploy.providers.ScanningAppProvider] [main] [ScanningAppProvider.java:140] - <Does not exist: file:/D:/Project/guangzhou/trunk/gz-eagle-collector/webapps>
+2019-03-28 08:10:00,057 INFO [com.linkcm.core.schedul.SchedulerJobImpl] [DefaultQuartzScheduler_Worker-1] [SchedulerJobImpl.java:28] - <dangerCarConfiguration execute ...>
+2019-03-28 08:10:00,057 INFO [com.linkcm.core.schedul.SchedulerJobImpl] [DefaultQuartzScheduler_Worker-2] [SchedulerJobImpl.java:28] - <hazeDataConfiguration execute ...>
+2019-03-28 08:10:00,060 INFO [com.linkcm.gz.collector.HazeDataCollector] [DefaultQuartzScheduler_Worker-2] [HazeDataCollector.java:56] - <hazeDataConfiguration collector execute.>
+2019-03-28 08:10:00,132 INFO [com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource] [DefaultQuartzScheduler_Worker-1] [AbstractPoolBackedDataSource.java:462] - <Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 60000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 20000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge11ba11hq45ji1o2iaxw|6949e948, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge11ba11hq45ji1o2iaxw|6949e948, idleConnectionTestPeriod -> 120, initialPoolSize -> 5, jdbcUrl -> jdbc:oracle:thin:@10.153.130.55:1521:GZQX, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]>
+2019-03-28 08:10:01,499 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-2] [HttpClientUtil.java:63] - <sendGetRequest decodeCharset = null, url = http://172.22.1.175/di/http.action?interfaceId=getStationInfo_PROVINCE&dataFormat=json&value=%B9%E3%B6%AB&userId=sqxt&pwd=shengqxt123>
+2019-03-28 08:10:23,932 ERROR [org.quartz.core.JobRunShell] [DefaultQuartzScheduler_Worker-2] [JobRunShell.java:211] - <Job EXTJWEB_JOBGROUP_NAME.hazeDataConfiguration threw an unhandled Exception: >
+com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:194)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:63)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:44)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:513)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:244)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:220)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:179)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:323)
+	at com.linkcm.gz.collector.HazeDataCollector.initSiteMap(HazeDataCollector.java:384)
+	at com.linkcm.gz.collector.HazeDataCollector.syncData(HazeDataCollector.java:104)
+	at com.linkcm.gz.collector.HazeDataCollector.collectData(HazeDataCollector.java:82)
+	at com.linkcm.gz.collector.HazeDataCollector.collector(HazeDataCollector.java:68)
+	at com.linkcm.core.collector.CollectorFactory.executeCollector(CollectorFactory.java:84)
+	at com.linkcm.core.schedul.SchedulerJobImpl.execute(SchedulerJobImpl.java:29)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+2019-03-28 08:10:23,941 ERROR [org.quartz.core.ErrorLogger] [DefaultQuartzScheduler_Worker-2] [QuartzScheduler.java:2185] - <Job (EXTJWEB_JOBGROUP_NAME.hazeDataConfiguration threw an exception.>
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+Caused by: com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:194)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:63)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:44)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:513)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:244)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:220)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:179)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:323)
+	at com.linkcm.gz.collector.HazeDataCollector.initSiteMap(HazeDataCollector.java:384)
+	at com.linkcm.gz.collector.HazeDataCollector.syncData(HazeDataCollector.java:104)
+	at com.linkcm.gz.collector.HazeDataCollector.collectData(HazeDataCollector.java:82)
+	at com.linkcm.gz.collector.HazeDataCollector.collector(HazeDataCollector.java:68)
+	at com.linkcm.core.collector.CollectorFactory.executeCollector(CollectorFactory.java:84)
+	at com.linkcm.core.schedul.SchedulerJobImpl.execute(SchedulerJobImpl.java:29)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2019-03-28 08:11:00,001 INFO [com.linkcm.core.schedul.SchedulerJobImpl] [DefaultQuartzScheduler_Worker-3] [SchedulerJobImpl.java:28] - <laserRadarConfiguration execute ...>
+2019-03-28 08:11:00,003 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:42] - <laserRadarConfiguration collector execute.>
+2019-03-28 08:11:00,204 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/extin532-2019032808.jpg>
+2019-03-28 08:11:00,293 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/depol-2019032808.jpg>
+2019-03-28 08:11:00,395 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pbl-2019032808.jpg>
+2019-03-28 08:11:00,441 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pm25-2019032808.jpg>
+2019-03-28 08:11:00,472 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pm10-2019032808.jpg>
+2019-03-28 08:11:00,507 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/aod-2019032808.jpg>
+2019-03-28 08:11:00,536 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/visibility-2019032808.jpg>
+2019-03-28 08:11:00,567 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pollutantsJudgment-2019032808.jpg>
+2019-03-28 08:11:00,597 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/extin532-2019032807.jpg>
+2019-03-28 08:11:00,629 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/depol-2019032807.jpg>
+2019-03-28 08:11:00,661 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pbl-2019032807.jpg>
+2019-03-28 08:11:00,697 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pm25-2019032807.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/pm25-2019032807Max.jpg>
+2019-03-28 08:11:25,349 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pm10-2019032807.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/pm10-2019032807Max.jpg>
+2019-03-28 08:11:49,440 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/aod-2019032807.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/aod-2019032807Max.jpg>
+2019-03-28 08:12:13,580 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/visibility-2019032807.jpg>
+2019-03-28 08:12:13,613 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:149] - <下载失败,原因文件未生成,下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pollutantsJudgment-2019032807.jpg>
+2019-03-28 08:12:13,654 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/extin532-2019032806.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/extin532-2019032806Max.jpg>
+2019-03-28 08:12:37,805 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/depol-2019032806.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/depol-2019032806Max.jpg>
+2019-03-28 08:13:02,037 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pbl-2019032806.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/pbl-2019032806Max.jpg>
+2019-03-28 08:13:26,293 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pm25-2019032806.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/pm25-2019032806Max.jpg>
+2019-03-28 08:13:50,642 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pm10-2019032806.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/pm10-2019032806Max.jpg>
+2019-03-28 08:14:14,985 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/aod-2019032806.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/aod-2019032806Max.jpg>
+2019-03-28 08:14:39,022 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/visibility-2019032806.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/visibility-2019032806Max.jpg>
+2019-03-28 08:15:00,006 INFO [com.linkcm.core.schedul.SchedulerJobImpl] [DefaultQuartzScheduler_Worker-4] [SchedulerJobImpl.java:28] - <dangerCarConfiguration execute ...>
+2019-03-28 08:15:00,009 INFO [com.linkcm.core.schedul.SchedulerJobImpl] [DefaultQuartzScheduler_Worker-5] [SchedulerJobImpl.java:28] - <hazeDataConfiguration execute ...>
+2019-03-28 08:15:00,009 INFO [com.linkcm.gz.collector.HazeDataCollector] [DefaultQuartzScheduler_Worker-5] [HazeDataCollector.java:56] - <hazeDataConfiguration collector execute.>
+2019-03-28 08:15:04,882 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-5] [HttpClientUtil.java:63] - <sendGetRequest decodeCharset = null, url = http://172.22.1.175/di/http.action?interfaceId=getStationInfo_PROVINCE&dataFormat=json&value=%B9%E3%B6%AB&userId=sqxt&pwd=shengqxt123>
+2019-03-28 08:15:05,018 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-3] [HttpClientUtil.java:364] - <下载文件的地址： url = http://10.12.12.211:8111/filelist/laser/GZLidar/20190328/pollutantsJudgment-2019032806.jpg,  下载文件保存路径 ：filePath = D:/ProjectTest/20190328/pollutantsJudgment-2019032806Max.jpg>
+2019-03-28 08:15:25,890 ERROR [org.quartz.core.JobRunShell] [DefaultQuartzScheduler_Worker-5] [JobRunShell.java:211] - <Job EXTJWEB_JOBGROUP_NAME.hazeDataConfiguration threw an unhandled Exception: >
+com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:194)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:63)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:44)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:513)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:244)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:220)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:179)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:323)
+	at com.linkcm.gz.collector.HazeDataCollector.initSiteMap(HazeDataCollector.java:384)
+	at com.linkcm.gz.collector.HazeDataCollector.syncData(HazeDataCollector.java:104)
+	at com.linkcm.gz.collector.HazeDataCollector.collectData(HazeDataCollector.java:93)
+	at com.linkcm.gz.collector.HazeDataCollector.collector(HazeDataCollector.java:68)
+	at com.linkcm.core.collector.CollectorFactory.executeCollector(CollectorFactory.java:84)
+	at com.linkcm.core.schedul.SchedulerJobImpl.execute(SchedulerJobImpl.java:29)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+2019-03-28 08:15:25,894 ERROR [org.quartz.core.ErrorLogger] [DefaultQuartzScheduler_Worker-5] [QuartzScheduler.java:2185] - <Job (EXTJWEB_JOBGROUP_NAME.hazeDataConfiguration threw an exception.>
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+Caused by: com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:194)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:63)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:44)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:513)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:244)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:220)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:179)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:323)
+	at com.linkcm.gz.collector.HazeDataCollector.initSiteMap(HazeDataCollector.java:384)
+	at com.linkcm.gz.collector.HazeDataCollector.syncData(HazeDataCollector.java:104)
+	at com.linkcm.gz.collector.HazeDataCollector.collectData(HazeDataCollector.java:93)
+	at com.linkcm.gz.collector.HazeDataCollector.collector(HazeDataCollector.java:68)
+	at com.linkcm.core.collector.CollectorFactory.executeCollector(CollectorFactory.java:84)
+	at com.linkcm.core.schedul.SchedulerJobImpl.execute(SchedulerJobImpl.java:29)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2019-03-28 08:15:29,007 INFO [com.linkcm.gz.collector.LaserRadarCollector] [DefaultQuartzScheduler_Worker-3] [LaserRadarCollector.java:53] - <【耗时】:LaserRadarCollector 共耗时 ：【269.004】秒>
+2019-03-28 08:15:39,164 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-1] [DangerCarCollector.java:53] - <Load danger car snap datas 2364>
+2019-03-28 08:15:39,212 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-4] [DangerCarCollector.java:53] - <Load danger car snap datas 2383>
+2019-03-28 08:15:44,955 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-4] [DangerCarCollector.java:57] - <Load danger car datas 722>
+2019-03-28 08:15:45,807 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-1] [DangerCarCollector.java:57] - <Load danger car datas 1171>
+2019-03-28 08:15:52,458 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-4] [DangerCarCollector.java:84] - <Load danger car complete>
+2019-03-28 08:15:53,221 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-1] [DangerCarCollector.java:84] - <Load danger car complete>
+2019-03-28 08:20:00,006 INFO [com.linkcm.core.schedul.SchedulerJobImpl] [DefaultQuartzScheduler_Worker-6] [SchedulerJobImpl.java:28] - <dangerCarConfiguration execute ...>
+2019-03-28 08:20:00,010 INFO [com.linkcm.core.schedul.SchedulerJobImpl] [DefaultQuartzScheduler_Worker-7] [SchedulerJobImpl.java:28] - <hazeDataConfiguration execute ...>
+2019-03-28 08:20:00,010 INFO [com.linkcm.gz.collector.HazeDataCollector] [DefaultQuartzScheduler_Worker-7] [HazeDataCollector.java:56] - <hazeDataConfiguration collector execute.>
+2019-03-28 08:20:01,226 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-7] [HttpClientUtil.java:63] - <sendGetRequest decodeCharset = null, url = http://172.22.1.175/di/http.action?interfaceId=getStationInfo_PROVINCE&dataFormat=json&value=%B9%E3%B6%AB&userId=sqxt&pwd=shengqxt123>
+2019-03-28 08:20:08,093 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-6] [DangerCarCollector.java:53] - <Load danger car snap datas 2395>
+2019-03-28 08:20:14,234 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-6] [DangerCarCollector.java:57] - <Load danger car datas 1241>
+2019-03-28 08:20:18,574 INFO [com.linkcm.gz.collector.DangerCarCollector] [DefaultQuartzScheduler_Worker-6] [DangerCarCollector.java:84] - <Load danger car complete>
+2019-03-28 08:20:22,242 ERROR [org.quartz.core.JobRunShell] [DefaultQuartzScheduler_Worker-7] [JobRunShell.java:211] - <Job EXTJWEB_JOBGROUP_NAME.hazeDataConfiguration threw an unhandled Exception: >
+com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:194)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:63)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:44)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:513)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:244)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:220)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:179)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:323)
+	at com.linkcm.gz.collector.HazeDataCollector.initSiteMap(HazeDataCollector.java:384)
+	at com.linkcm.gz.collector.HazeDataCollector.syncData(HazeDataCollector.java:104)
+	at com.linkcm.gz.collector.HazeDataCollector.collectData(HazeDataCollector.java:93)
+	at com.linkcm.gz.collector.HazeDataCollector.collector(HazeDataCollector.java:68)
+	at com.linkcm.core.collector.CollectorFactory.executeCollector(CollectorFactory.java:84)
+	at com.linkcm.core.schedul.SchedulerJobImpl.execute(SchedulerJobImpl.java:29)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+2019-03-28 08:20:22,243 ERROR [org.quartz.core.ErrorLogger] [DefaultQuartzScheduler_Worker-7] [QuartzScheduler.java:2185] - <Job (EXTJWEB_JOBGROUP_NAME.hazeDataConfiguration threw an exception.>
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+Caused by: com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:194)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:63)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:44)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:513)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:244)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:220)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:179)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:323)
+	at com.linkcm.gz.collector.HazeDataCollector.initSiteMap(HazeDataCollector.java:384)
+	at com.linkcm.gz.collector.HazeDataCollector.syncData(HazeDataCollector.java:104)
+	at com.linkcm.gz.collector.HazeDataCollector.collectData(HazeDataCollector.java:93)
+	at com.linkcm.gz.collector.HazeDataCollector.collector(HazeDataCollector.java:68)
+	at com.linkcm.core.collector.CollectorFactory.executeCollector(CollectorFactory.java:84)
+	at com.linkcm.core.schedul.SchedulerJobImpl.execute(SchedulerJobImpl.java:29)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2019-03-28 08:21:00,001 INFO [com.linkcm.core.schedul.SchedulerJobImpl] [DefaultQuartzScheduler_Worker-8] [SchedulerJobImpl.java:28] - <siteDataConfiguration execute ...>
+2019-03-28 08:21:00,001 INFO [com.linkcm.gz.collector.SiteDataCollector] [DefaultQuartzScheduler_Worker-8] [SiteDataCollector.java:65] - <siteDataConfiguration collector execute.>
+2019-03-28 08:21:01,226 INFO [com.linkcm.gz.utils.HttpClientUtil] [DefaultQuartzScheduler_Worker-8] [HttpClientUtil.java:63] - <sendGetRequest decodeCharset = null, url = http://172.22.1.175/di/http.action?interfaceId=getStationInfo_PROVINCE&dataFormat=json&value=%B9%E3%B6%AB&userId=sqxt&pwd=shengqxt123>
+2019-03-28 08:21:22,254 ERROR [org.quartz.core.JobRunShell] [DefaultQuartzScheduler_Worker-8] [JobRunShell.java:211] - <Job EXTJWEB_JOBGROUP_NAME.siteDataConfiguration threw an unhandled Exception: >
+com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:194)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:63)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:44)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:513)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:244)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:220)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:179)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:323)
+	at com.linkcm.gz.collector.SiteDataCollector.initSiteMap(SiteDataCollector.java:203)
+	at com.linkcm.gz.collector.SiteDataCollector.syncData(SiteDataCollector.java:229)
+	at com.linkcm.gz.collector.SiteDataCollector.collectData(SiteDataCollector.java:92)
+	at com.linkcm.gz.collector.SiteDataCollector.collector(SiteDataCollector.java:78)
+	at com.linkcm.core.collector.CollectorFactory.executeCollector(CollectorFactory.java:84)
+	at com.linkcm.core.schedul.SchedulerJobImpl.execute(SchedulerJobImpl.java:29)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+2019-03-28 08:21:22,254 ERROR [org.quartz.core.ErrorLogger] [DefaultQuartzScheduler_Worker-8] [QuartzScheduler.java:2185] - <Job (EXTJWEB_JOBGROUP_NAME.siteDataConfiguration threw an exception.>
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+Caused by: com.alibaba.fastjson.JSONException: syntax error, expect {, actual EOF
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:194)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:63)
+	at com.alibaba.fastjson.parser.deserializer.MapDeserializer.deserialze(MapDeserializer.java:44)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:513)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:244)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:220)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:179)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:323)
+	at com.linkcm.gz.collector.SiteDataCollector.initSiteMap(SiteDataCollector.java:203)
+	at com.linkcm.gz.collector.SiteDataCollector.syncData(SiteDataCollector.java:229)
+	at com.linkcm.gz.collector.SiteDataCollector.collectData(SiteDataCollector.java:92)
+	at com.linkcm.gz.collector.SiteDataCollector.collector(SiteDataCollector.java:78)
+	at com.linkcm.core.collector.CollectorFactory.executeCollector(CollectorFactory.java:84)
+	at com.linkcm.core.schedul.SchedulerJobImpl.execute(SchedulerJobImpl.java:29)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
