@@ -52,8 +52,9 @@ public class SchedulerQuartzJob1 implements Job {
                 if (matcher.matches()) {
 
                     System.out.println("Passed");
-                } else
+                } else {
                     System.out.println("Failed;");
+                }
             }
         }
     }
